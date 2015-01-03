@@ -253,7 +253,7 @@ void State::Write( const fs::path& filename ) const
 	
 	Json result ;
 	result.Add( "last_sync", last_sync ) ;
-	result.Add( "change_stamp", static_cast<boost::uint64_t>(Json(m_cstamp)) ) ;
+	result.Add( "change_stamp", Json(static_cast<boost::uint64_t>(m_cstamp)) );
 	
 	std::ofstream fs( filename.string().c_str() ) ;
 	fs << result ;
